@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CMS.master.cs" Inherits="_3851CMS.CMS" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>COMP3851_CMS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="/Content//bootstrap.min.css">
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/Content/Sidebar-Menu.css">
+    <link rel="stylesheet" href="/Content/sidebar.css">
+    <link rel="stylesheet" href="/Content/Ultimate-Sidebar-Menu.css">
+    <link rel="stylesheet" href="/Content/Ultimate-Testimonial-Slider-BS5.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div><div id="wrapper">
+        <div class="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                        </div>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="brand"><a class="navbar-brand" href="/pages/MHome">UON Orientation CMS</a></div>
+        <nav class="navbar navbar-dark navbar-expand" style="background: rgb(38,38,38);">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto flex-column mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="/pages/edit/admin?page=1">Edit Index</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/edit/admin?page=2">Edit Article</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/edit/admin?page=3">Edit FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/edit/admin?page=4">Edit Discipline</a></li>
+                    <li class="nav-item"><asp:LinkButton ID="LogoutLink" runat="server" OnClick="LogoutLink_Click" CssClass="nav-link">Logout</asp:LinkButton></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+        </div>
+    </form>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btnNewFAQ').click(function () {
+                $('#newFAQ').toggle();
+            });
+        });
+    </script>
+</body>
+</html>

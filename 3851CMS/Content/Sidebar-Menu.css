@@ -1,0 +1,87 @@
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar-wrapper {
+  z-index: 1;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 300px;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar-nav {
+  position: absolute;
+  width: 250px;
+  margin: 0;
+  margin-bottom: 160px;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #888888;
+}
+
+.sidebar-nav li a.highlight, 
+.sidebar-nav li a.active {
+    background-color: #c0dbf6; 
+    color: #343a40; 
+}
+
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media (min-width:768px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+}
+
+@media (min-width:768px) {
+  #sidebar-wrapper {
+    width: 250px;
+  }
+}
+
